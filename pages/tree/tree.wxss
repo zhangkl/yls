@@ -1,0 +1,17 @@
+/**index.wxss**/
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.action-view {
+  width: 10%;
+  height: 10%;
+  display: none;
+}
+
+.info-view {
+  width: 60%;
+  height: 20%;
+  display: none;
+}
