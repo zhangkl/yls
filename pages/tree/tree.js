@@ -9,7 +9,7 @@ function initChart(canvas, width, height, dpr) {
     devicePixelRatio: dpr // new
   });
   canvas.setChart(chart);
-  var colors = ['#FF3300', '#FF3399', '#FF33FF', '#CC3F57', '#9A2555'];
+  var colors = ['#80CEBE','#7FD9D6', '#9FDEBD',  '#C4F2CE', '#9A2555'];
   var bgColor = '#2E2733';
   var data = [{
     name: '所有',
@@ -93,7 +93,7 @@ function initChart(canvas, width, height, dpr) {
   chart.on('click', function (params) {
     // 控制台打印数据的名称
     console.log(params);
-});
+  });
   return chart;
 }
 
