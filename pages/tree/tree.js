@@ -67,7 +67,7 @@ function initChart(canvas, width, height, dpr) {
     },
     series: [{
       name: '总资产',
-      radius: [0, '90%'],
+      radius: ['10%', '90%'],
       type: 'sunburst',
       sort: null,
       nodeClick: false,
@@ -93,9 +93,11 @@ function initChart(canvas, width, height, dpr) {
   chart.on('click', function (params) {
     // 控制台打印数据的名称
     console.log(params);
+    this.changeStatus(params);
   });
   return chart;
 }
+
 
 Page({
   onShareAppMessage: function (res) {
@@ -109,8 +111,14 @@ Page({
   data: {
     ec: {
       onInit: initChart
-    }
+    },
+    ishidden_info:true
   },
 
-  onReady() {}
+  onReady() {
+   
+  },
+  changeStatus:function(params){
+    console.log(params);
+  }
 });

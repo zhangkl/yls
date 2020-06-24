@@ -1,17 +1,26 @@
 <!--index.wxml-->
 <!-- <button id="modify">编辑</button>
  -->
-<view class="container_tree">
-  <view id="action-view">
-    <label class="action_label" id="modify">编辑本节点</label>
-    <label class="action_label" id="add">新增子节点</label>
-    <label class="action_label" id="remove">删除本节点</label>
-  </view>
-  <view id="info-view">
-    <label>节点名称:</label><input></input>
-    <label>节点值:</label><input></input>
-  </view>
 
-  <ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ ec }}"></ec-canvas>
-  
+
+<view id="info-view" hidden="{{ishidden_info}}">
+	<view class="item-view">
+		<text class="tip">*</text>
+		<text class="tip2">name</text>
+		<input class="input" placeholder-class="plac" maxlength="11" type="text" />
+	</view>
+	<view class="item-view">
+		<text class="tip">*</text>
+		<text class="tip2">value</text>
+		<input class="input input2" placeholder-class="plac" type="number" />
+	</view>
+  <view class="btn-view" >
+      <button class="mini-btn" type="primary" size="mini">保存</button>
+      <button class="mini-btn" type="default" size="mini">新增</button>
+      <button class="mini-btn" type="warn" size="mini">删除</button>
+    </view>
+</view>
+<view class="container_tree">
+	<ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ ec }}"></ec-canvas>
+
 </view>
